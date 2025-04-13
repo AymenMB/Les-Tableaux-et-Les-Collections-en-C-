@@ -193,7 +193,7 @@ Le projet évolue à travers trois activités, chacune avec sa propre approche :
 
 ## 📝 Auteur
 
-[Votre Nom]
+Aymen Mabrouk
 
 ## 📄 Licence
 

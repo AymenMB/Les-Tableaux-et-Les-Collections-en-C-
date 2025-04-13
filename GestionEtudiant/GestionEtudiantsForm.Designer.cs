@@ -1,4 +1,6 @@
-﻿namespace GestionEtudiant
+﻿// GestionEtudiantsForm.Designer.cs
+
+namespace GestionEtudiant
 {
     partial class GestionEtudiantsForm
     {
@@ -36,6 +38,8 @@
             labelAge = new Label();
             textBoxNom = new TextBox();
             numericUpDownAge = new NumericUpDown();
+            labelEmail = new Label();
+            textBoxEmail = new TextBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             buttonAjouter = new Button();
             buttonModifier = new Button();
@@ -113,15 +117,17 @@
             tableLayoutPanel2.Controls.Add(labelAge, 0, 1);
             tableLayoutPanel2.Controls.Add(textBoxNom, 1, 0);
             tableLayoutPanel2.Controls.Add(numericUpDownAge, 1, 1);
+            tableLayoutPanel2.Controls.Add(labelEmail, 0, 2);
+            tableLayoutPanel2.Controls.Add(textBoxEmail, 1, 2);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(4, 31);
             tableLayoutPanel2.Margin = new Padding(4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 3;
+            tableLayoutPanel2.RowCount = 4;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 42F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(1084, 123);
             tableLayoutPanel2.TabIndex = 0;
             // 
@@ -162,9 +168,32 @@
             // 
             numericUpDownAge.Location = new Point(100, 49);
             numericUpDownAge.Margin = new Padding(4);
+            numericUpDownAge.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDownAge.Name = "numericUpDownAge";
             numericUpDownAge.Size = new Size(80, 34);
             numericUpDownAge.TabIndex = 10;
+            numericUpDownAge.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // labelEmail
+            // 
+            labelEmail.AutoSize = true;
+            labelEmail.Dock = DockStyle.Fill;
+            labelEmail.Location = new Point(4, 87);
+            labelEmail.Margin = new Padding(4, 0, 4, 0);
+            labelEmail.Name = "labelEmail";
+            labelEmail.Size = new Size(88, 45);
+            labelEmail.TabIndex = 11;
+            labelEmail.Text = "E&mail :";
+            labelEmail.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // textBoxEmail
+            // 
+            textBoxEmail.Dock = DockStyle.Fill;
+            textBoxEmail.Location = new Point(100, 91);
+            textBoxEmail.Margin = new Padding(4);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(438, 34);
+            textBoxEmail.TabIndex = 12;
             // 
             // flowLayoutPanel1
             // 
@@ -191,7 +220,7 @@
             buttonAjouter.Location = new Point(4, 4);
             buttonAjouter.Margin = new Padding(4);
             buttonAjouter.Name = "buttonAjouter";
-            buttonAjouter.Size = new Size(141, 54);
+            buttonAjouter.Size = new Size(145, 54);
             buttonAjouter.TabIndex = 0;
             buttonAjouter.Text = "&Ajouter";
             buttonAjouter.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -206,10 +235,10 @@
             buttonModifier.Font = new Font("Segoe UI", 12.1008406F, FontStyle.Bold);
             buttonModifier.Image = Properties.Resources.pencil_small_icon;
             buttonModifier.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonModifier.Location = new Point(153, 4);
+            buttonModifier.Location = new Point(157, 4);
             buttonModifier.Margin = new Padding(4);
             buttonModifier.Name = "buttonModifier";
-            buttonModifier.Size = new Size(152, 54);
+            buttonModifier.Size = new Size(156, 54);
             buttonModifier.TabIndex = 1;
             buttonModifier.Text = "&Modifier";
             buttonModifier.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -223,10 +252,10 @@
             buttonSupprimer.Cursor = Cursors.Hand;
             buttonSupprimer.Font = new Font("Segoe UI", 12.1008406F, FontStyle.Bold);
             buttonSupprimer.Image = Properties.Resources.remove_icon;
-            buttonSupprimer.Location = new Point(313, 4);
+            buttonSupprimer.Location = new Point(321, 4);
             buttonSupprimer.Margin = new Padding(4);
             buttonSupprimer.Name = "buttonSupprimer";
-            buttonSupprimer.Size = new Size(168, 54);
+            buttonSupprimer.Size = new Size(174, 54);
             buttonSupprimer.TabIndex = 2;
             buttonSupprimer.Text = "&Supprimer";
             buttonSupprimer.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -235,7 +264,7 @@
             // 
             // textBoxRecherche
             // 
-            textBoxRecherche.Location = new Point(488, 15);
+            textBoxRecherche.Location = new Point(502, 15);
             textBoxRecherche.Margin = new Padding(3, 15, 3, 3);
             textBoxRecherche.Name = "textBoxRecherche";
             textBoxRecherche.Size = new Size(289, 34);
@@ -249,9 +278,9 @@
             buttonRechercher.Font = new Font("Segoe UI", 12.1008406F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonRechercher.Image = Properties.Resources.spyglass_icon;
             buttonRechercher.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonRechercher.Location = new Point(783, 3);
+            buttonRechercher.Location = new Point(797, 3);
             buttonRechercher.Name = "buttonRechercher";
-            buttonRechercher.Size = new Size(176, 54);
+            buttonRechercher.Size = new Size(179, 54);
             buttonRechercher.TabIndex = 3;
             buttonRechercher.Text = "&Rechercher";
             buttonRechercher.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -275,10 +304,10 @@
             buttonTrier.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             buttonTrier.Cursor = Cursors.Hand;
             buttonTrier.Image = Properties.Resources.arrow_double_up_icon;
-            buttonTrier.Location = new Point(898, 4);
+            buttonTrier.Location = new Point(890, 4);
             buttonTrier.Margin = new Padding(4);
             buttonTrier.Name = "buttonTrier";
-            buttonTrier.Size = new Size(190, 54);
+            buttonTrier.Size = new Size(198, 54);
             buttonTrier.TabIndex = 11;
             buttonTrier.Text = "&Trier par Nom";
             buttonTrier.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -320,8 +349,6 @@
         private DataGridView dataGridView;
         private GroupBox groupBoxEtudiant;
         private TableLayoutPanel tableLayoutPanel2;
-        private Label labelId;
-        private TextBox textBoxID;
         private Label labelNom;
         private Label labelAge;
         private TextBox textBoxNom;
@@ -332,7 +359,9 @@
         private FlowLayoutPanel flowLayoutPanel2;
         private Button buttonModifier;
         private NumericUpDown numericUpDownAge;
-        private Button buttonRechercher;
+        private Label labelEmail;
+        private TextBox textBoxEmail;
         private TextBox textBoxRecherche;
+        private Button buttonRechercher;
     }
 }
